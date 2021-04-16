@@ -1,4 +1,4 @@
-package com.endeymus.scrap.thinkininjava;
+package com.endeymus.scrap.thinkininjava.ocajp;
 
 import java.util.Collections;
 
