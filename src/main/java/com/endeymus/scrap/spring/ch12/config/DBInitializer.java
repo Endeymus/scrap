@@ -1,8 +1,8 @@
-package com.endeymus.scrap.spring.ch9.config;
+package com.endeymus.scrap.spring.ch12.config;
 
-import com.endeymus.scrap.spring.ch9.entities.Album;
-import com.endeymus.scrap.spring.ch9.entities.Singer;
-import com.endeymus.scrap.spring.ch9.repository.SingerRepository;
+import com.endeymus.scrap.spring.ch12.entities.Album;
+import com.endeymus.scrap.spring.ch12.entities.Singer;
+import com.endeymus.scrap.spring.ch12.repository.SingerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +19,10 @@ import java.util.GregorianCalendar;
 public class DBInitializer {
     private Logger logger = LoggerFactory.getLogger(DBInitializer.class);
 
-//    @Autowired
+    @Autowired
     SingerRepository singerRepository;
 
-//    @PostConstruct
+    @PostConstruct
     public void initDB(){
         logger.info("Starting database initialization...");
 

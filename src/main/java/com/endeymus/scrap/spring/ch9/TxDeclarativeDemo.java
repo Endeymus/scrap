@@ -1,20 +1,21 @@
 package com.endeymus.scrap.spring.ch9;
 
-import com.endeymus.scrap.spring.ch9.config.DataJpaConfig;
-import com.endeymus.scrap.spring.ch9.config.ServicesConfig;
 import com.endeymus.scrap.spring.ch9.entities.Singer;
 import com.endeymus.scrap.spring.ch9.services.SingerService;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.util.List;
 
 /**
  * @author Mark Shamray
  */
-public class TxAnnotationDemo {
+public class TxDeclarativeDemo {
     public static void main(String[] args) {
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(ServicesConfig.class, DataJpaConfig.class);
+        GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+        ctx.load("classpath:tx-declarative-app-context.xml");
+        ctx.refresh();
+
         SingerService singerService = ctx.getBean(SingerService.class);
 
         List<Singer> singerList = singerService.findAll();

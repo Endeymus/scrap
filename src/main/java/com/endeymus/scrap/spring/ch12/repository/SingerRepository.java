@@ -1,6 +1,6 @@
-package com.endeymus.scrap.spring.ch9.repository;
+package com.endeymus.scrap.spring.ch12.repository;
 
-import com.endeymus.scrap.spring.ch9.entities.Singer;
+import com.endeymus.scrap.spring.ch12.entities.Singer;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

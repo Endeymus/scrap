@@ -12,9 +12,10 @@ import java.util.List;
 /**
  * @author Mark Shamray
  */
-public class TxAnnotationDemo {
+public class TxProgrammaticDemo {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(ServicesConfig.class, DataJpaConfig.class);
+
         SingerService singerService = ctx.getBean(SingerService.class);
 
         List<Singer> singerList = singerService.findAll();
